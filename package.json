@@ -1,0 +1,11 @@
+{
+  "name": "wechatSign",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "index"
+  },
+  "dependencies": {
+    "express": "~4.13.1"
+  }
+}
