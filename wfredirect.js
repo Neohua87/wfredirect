@@ -45,5 +45,38 @@ router.get('/', function(req, res, next) {
 
     }
 });
+//跳转到wechat
+ router.get('/wecaht',function(req,res,next){
+
+    var code = req.query.code;
+    var scope=req.query.scope;
+    console.log("code:" + code);
+     if(code!=null){
+         if(scope=='snsapi_userinfo'){
+             //http.httpget(wechat.host, wechat.userinfoApi + access_token + "&openid=" + openid + "&lang=zh_CN", null, function (result, status) {
+             //    var temp = JSON.parse(result.toString());
+             //    var nickname = temp.nickname;
+             //    console.log('nickname:' + nickname);
+             //    console.log("openid2:" + openid);
+             //    var user="&openid=" +openid;
+             //    res.send(user);
+             //});
+
+             //res.send("true");
+             res.render('test',{focus:true});
+         }else{
+             //res.send("false");
+             res.render('test',{focus:false});
+         }
+
+     }else{
+         res.render('test',{focus:false});
+     }
+
+
+
+    //获取授权token,以及openid
+
+});
 
 module.exports = wfredirect;
