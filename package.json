@@ -1,10 +1,11 @@
 {
-  "name": "wechatSign",
+  "name": "wechat_sign",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "index"
   },
+  "author":"neohua",
   "dependencies": {
     "express": "~4.13.1"
   }

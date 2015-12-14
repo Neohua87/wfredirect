@@ -41,42 +41,27 @@ router.get('/', function(req, res, next) {
         }
 
         return 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='+appid+'&redirect_uri=http%3a%2f%2f'+host+'%2f'+
-            localpath+'&response_type=code&scope=snsapi_'+access_type+'&state=state&from=singlemessage&isappinstalled=0#wechat_redirect' ;
+            localpath+'&response_type=code&scope=snsapi_'+access_type+'&state='+access_type+'&from=singlemessage&isappinstalled=0#wechat_redirect' ;
 
     }
 });
 //跳转到wechat
- router.get('/wecaht',function(req,res,next){
+router.get('/wechat',function(req,res,next) {
+    console.log(url.parse(req.url));
 
     var code = req.query.code;
-    var scope=req.query.scope;
+    var scope = req.query.state;
     console.log("code:" + code);
-     if(code!=null){
-         if(scope=='snsapi_userinfo'){
-             //http.httpget(wechat.host, wechat.userinfoApi + access_token + "&openid=" + openid + "&lang=zh_CN", null, function (result, status) {
-             //    var temp = JSON.parse(result.toString());
-             //    var nickname = temp.nickname;
-             //    console.log('nickname:' + nickname);
-             //    console.log("openid2:" + openid);
-             //    var user="&openid=" +openid;
-             //    res.send(user);
-             //});
+    console.log("scope:" + scope);
+    if (code && scope === 'userinfo') {
+        res.render('wechat', {
+            'focus': true
+        });
 
-             //res.send("true");
-             res.render('test',{focus:true});
-         }else{
-             //res.send("false");
-             res.render('test',{focus:false});
-         }
-
-     }else{
-         res.render('test',{focus:false});
-     }
-
-
-
-    //获取授权token,以及openid
-
+    } else {
+        res.render('wechat', {
+            'focus': false
+        });
+    }
 });
-
-module.exports = wfredirect;
+module.exports = router;
