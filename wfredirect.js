@@ -5,17 +5,16 @@ var config=require('lib/config.js');
 router.get('/', function(req, res, next) {
 
    var target=req.headers['user-agent'];
-    var host=req.headers['host'];
+    var host=config.host||req.headers['host'];
     var protocol=config.protocol;
-    protocol=protocol['http://']?'http://':'https://';
+    protocol=protocol||'http://';
     var wxflag=config.isAllowUnfocuseToProcess;
     var appid=config.appid;
     var localpath=config.localpath;
     var patt1= new RegExp(".+MicroMessenger.+");
- console.log('target:'+target);
     if(patt1.test(target)){
         console.log("wechat");
-        var wxredirect_url=get_wxredirect_url(appid,'xiuquan.5ftech.com',wxflag,localpath);
+        var wxredirect_url=get_wxredirect_url(appid,host,wxflag,localpath);
             console.log(wxredirect_url);
         res.redirect(wxredirect_url);
 

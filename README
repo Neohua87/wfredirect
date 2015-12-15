@@ -1,9 +1,11 @@
-
-####introuduction
+##install
+   $ bower install com.wufan.util.wechat-redirect --save
+##introuduction
     this module is developed to the satisify the need of redirect in three environments :wechat browser/PC browser/Aplipay .
     it shows you great facility of redirect by config your own arguments
     more detail go follows:
-###usage
+
+##usage
   #first step
     put the 'lib' on your root directory ;
     put the wfredirect.js in you file like '/router',and require it in app.js.
@@ -19,6 +21,4 @@
   the default protocol is setted to "http://"
 
   ------- isAllowUnfocuseToProcess——————
-  this agrument is default setted to 'true' which means that when click the link,
-  it will be redirected to your wechatpage && uers have access to the page without
-  focuns on your wechat Subscriptions.
+  ```focuns on your wechat Subscriptions.
