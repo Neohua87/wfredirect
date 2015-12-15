@@ -1,0 +1,92 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/5.1.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.5.0
+3 info using node@v5.1.0
+4 verbose config Skipping project config: /Users/wufan/.npmrc. (matches userconfig)
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/wufan/huapeishu/wfredirect',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/wufan/.npm/com.wufan.util.wechat-redirect/0.1.1/package.tgz not in flight; packing
+10 info lifecycle com.wufan.util.wechat-redirect@0.1.1~prepublish: com.wufan.util.wechat-redirect@0.1.1
+11 silly lifecycle com.wufan.util.wechat-redirect@0.1.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/wufan/.npm/com.wufan.util.wechat-redirect/0.1.1/package.tgz',
+12 verbose tar pack   '/Users/wufan/huapeishu/wfredirect' ]
+13 verbose tarball /Users/wufan/.npm/com.wufan.util.wechat-redirect/0.1.1/package.tgz
+14 verbose folder /Users/wufan/huapeishu/wfredirect
+15 verbose addLocalTarball adding from inside cache /Users/wufan/.npm/com.wufan.util.wechat-redirect/0.1.1/package.tgz
+16 silly cache afterAdd com.wufan.util.wechat-redirect@0.1.1
+17 verbose afterAdd /Users/wufan/.npm/com.wufan.util.wechat-redirect/0.1.1/package/package.json not in flight; writing
+18 verbose afterAdd /Users/wufan/.npm/com.wufan.util.wechat-redirect/0.1.1/package/package.json written
+19 silly publish { name: 'com.wufan.util.wechat-redirect',
+19 silly publish   version: '0.1.1',
+19 silly publish   private: false,
+19 silly publish   scripts: { start: 'index' },
+19 silly publish   author: { name: 'neohua' },
+19 silly publish   dependencies: { express: '~4.13.1' },
+19 silly publish   readme: '##install\n   $ bower install com.wufan.util.wechat-redirect --save\n##introuduction\n    this module is developed to the satisify the need of redirect in three environments :wechat browser/PC browser/Aplipay .\n    it shows you great facility of redirect by config your own arguments\n    more detail go follows:\n\n##usage\n  #first step\n    put the \'lib\' on your root directory ;\n    put the wfredirect.js in you file like \'/router\',and require it in app.js.\n\n    and the advice given you shold not be ignore:if you drag the config.js in \'lib/\' to your\n    file such as "myfile",remember to edit the requirement of config.js in the wfredirect.js acoordinly\n\n\n  set your own appid and localpath and other agrus in need.\n\n  notice && instruction of some agrus\n  ————————protocol---------\n  the default protocol is setted to "http://"\n\n  ------- isAllowUnfocuseToProcess——————\n  ```focuns on your wechat Subscriptions.\n',
+19 silly publish   readmeFilename: 'README',
+19 silly publish   gitHead: 'f64fc7ab4674df35ad389b3547daac28a06d76eb',
+19 silly publish   description: '$ bower install com.wufan.util.wechat-redirect --save ##introuduction     this module is developed to the satisify the need of redirect in three environments :wechat browser/PC browser/Aplipay .     it shows you great facility of redirect by config your own arguments     more detail go follows:',
+19 silly publish   _id: 'com.wufan.util.wechat-redirect@0.1.1',
+19 silly publish   _shasum: '7a9e05ea52ee3e5e84a86084059786b8747c3867',
+19 silly publish   _from: 'huapeishu/wfredirect',
+19 silly publish   _resolved: 'file:huapeishu/wfredirect' }
+20 verbose getPublishConfig undefined
+21 silly mapToRegistry name com.wufan.util.wechat-redirect
+22 silly mapToRegistry using default registry
+23 silly mapToRegistry registry https://registry.npmjs.org/
+24 silly mapToRegistry uri https://registry.npmjs.org/com.wufan.util.wechat-redirect
+25 verbose publish registryBase https://registry.npmjs.org/
+26 silly publish uploading /Users/wufan/.npm/com.wufan.util.wechat-redirect/0.1.1/package.tgz
+27 verbose request uri https://registry.npmjs.org/com.wufan.util.wechat-redirect
+28 verbose request sending authorization for write operation
+29 info attempt registry request try #1 at 11:21:25 PM
+30 verbose request using bearer token for auth
+31 verbose request id e5ffc83394173ee8
+32 http request PUT https://registry.npmjs.org/com.wufan.util.wechat-redirect
+33 http 403 https://registry.npmjs.org/com.wufan.util.wechat-redirect
+34 verbose headers { 'content-type': 'application/json',
+34 verbose headers   'cache-control': 'max-age=300',
+34 verbose headers   'content-length': '95',
+34 verbose headers   'accept-ranges': 'bytes',
+34 verbose headers   date: 'Tue, 15 Dec 2015 07:21:27 GMT',
+34 verbose headers   via: '1.1 varnish',
+34 verbose headers   connection: 'keep-alive',
+34 verbose headers   'x-served-by': 'cache-ams4137-AMS',
+34 verbose headers   'x-cache': 'MISS',
+34 verbose headers   'x-cache-hits': '0',
+34 verbose headers   'x-timer': 'S1450164086.455455,VS0,VE1069' }
+35 verbose request invalidating /Users/wufan/.npm/registry.npmjs.org/com.wufan.util.wechat-redirect on PUT
+36 error publish Failed PUT 403
+37 verbose stack Error: "You cannot publish over the previously published version 0.1.1." : com.wufan.util.wechat-redirect
+37 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+37 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+37 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+37 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+37 verbose stack     at emitTwo (events.js:87:13)
+37 verbose stack     at Request.emit (events.js:172:7)
+37 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+37 verbose stack     at emitOne (events.js:82:20)
+37 verbose stack     at Request.emit (events.js:169:7)
+37 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+38 verbose statusCode 403
+39 verbose pkgid com.wufan.util.wechat-redirect
+40 verbose cwd /Users/wufan/huapeishu/wfredirect
+41 error Darwin 14.0.0
+42 error argv "/usr/local/Cellar/node/5.1.0/bin/node" "/usr/local/bin/npm" "publish"
+43 error node v5.1.0
+44 error npm  v3.5.0
+45 error code E403
+46 error "You cannot publish over the previously published version 0.1.1." : com.wufan.util.wechat-redirect
+47 error If you need help, you may report this error at:
+47 error     <https://github.com/npm/npm/issues>
+48 verbose exit [ 1, true ]
